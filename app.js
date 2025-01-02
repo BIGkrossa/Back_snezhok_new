@@ -18,7 +18,7 @@ const start = async () => {
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }));
 
-        app.post('/inc', async (req, res) => {
+        app.post('/api/inc', async (req, res) => {
             let { id } = req.body;
             try {
                 await users.findOneAndUpdate(
@@ -34,7 +34,7 @@ const start = async () => {
         });
 
 
-        app.post('/count', async (req, res) => {
+        app.post('/api/count', async (req, res) => {
             let { id } = req.body;
             console.log(req.body)
             try {
